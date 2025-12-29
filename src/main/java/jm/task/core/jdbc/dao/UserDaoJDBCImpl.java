@@ -33,7 +33,7 @@ public class UserDaoJDBCImpl implements UserDao {
 
     private final Connection connection;
 
-    public UserDaoJDBCImpl() {
+    public UserDaoJDBCImpl() throws SQLException {
         this.connection = new Util().getConnection();
     }
 
