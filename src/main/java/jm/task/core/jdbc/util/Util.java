@@ -10,11 +10,11 @@ import jm.task.core.jdbc.model.User;
 public class Util {
 
     private static final String USER = "root";
-    private static final String PASSWORD = "nehehe";
+    private static final String PASSWORD = "nebezopasno";
     private static final String URL = "jdbc:mysql://127.0.0.1:3306/pepe337db?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true";
     private static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
 
-    private static SessionFactory sessionFactory;
+    private SessionFactory sessionFactory;
 
     private Connection connection;
 
@@ -30,7 +30,7 @@ public class Util {
         return connection;
     }
 
-    public static SessionFactory getSessionFactory() {
+    public SessionFactory getSessionFactory() {
         if (sessionFactory == null) {
             try {
                 Configuration configuration = new Configuration()
